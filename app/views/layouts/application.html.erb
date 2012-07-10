@@ -5,22 +5,29 @@
 	  <%= stylesheet_link_tag    "application", :media => "all" %>
 	  <%= javascript_include_tag "application" %>
 	  <%= csrf_meta_tags %>
+		<link href='http://fonts.googleapis.com/css?family=Pontano+Sans' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
-		<header>
-			<div class='logo'>
-				EmClicks
+		<div class='frame'>
+			<header>
+				<div class='logo'>
+					<%= link_to 'EmClicks', '#' %>
+				</div>
+				<div class='menu'>
+					<ul>
+						<li><%= link_to 'Home', '#' %></li>
+						<li><%= link_to 'Portfolio', '#' %></li>
+						<li><%= link_to 'About', '#' %></li>
+						<li><%= link_to 'Blog', '#' %></li>
+						<li><%= link_to 'Hire', '#' %></li>
+					</ul>
+				</div>
+			</header>
+			<div class='content'>
+				<div class='content_wrap'>
+					<%= yield %>
+				</div>
 			</div>
-			<div class='menu'>
-				<ul>
-					<li><%= link_to 'Home', '#' %></li>
-					<li><%= link_to 'Portfolio', '#' %></li>
-					<li><%= link_to 'About', '#' %></li>
-					<li><%= link_to 'Blog', '#' %></li>
-					<li><%= link_to 'Hire', '#' %></li>
-				</ul>
-			</div>
-		</header>
-		<%= yield %>
+		</div>
 	</body>
 </html>
