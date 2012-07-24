@@ -2,9 +2,9 @@
 $purple:#613766;
 $dark_green:#008C4B;
 $green:#00BF66;
-$yellow:#F2BB00;
+$yellow:#F2BB00;*/
 
-$beige:#F6E6CE;
+/*$beige:#F6E6CE;
 $lightpink:#FEF1E0;
 $olive:#8B7325;
 
@@ -16,22 +16,54 @@ $darkgreen:#75821b;
 $green:#99a923;
 $lightgreen:#ccba27;*/
 
+/*$blue01:#EBFFFF;
 $blue0:#DEFFFF;
 $blue1:#BDF2F2;
 $blue2:#63bfbf;
 $blue3:#3f8c8c;
 $blue4:#255959;
-$blue5:#062626;
+$blue5:#062626;*/
 
-$background_inside:$blue0;
+/*$background_inside:$blue0;
 $background_outside:$blue2;
 $frame_border:$blue2;
 $frame_box_shadow:$blue3;
 $logo:$blue5;
 $menu_link:$blue4;
 $content:white;
-$span_border:$blue3;
+$span_border:$blue2;
+$header_background_light:$blue01;
+$header_background_dark:$blue1;*/
 
+/*$yellow:#FFED90;
+$purple:#4D4169;
+$dark_purple:#341139;
+$light_green:#BED4A1;
+$green:#A8D46F;
+$dark_green:#359668;
+*/
+
+$light_purple:#cfbfbd;
+$purple:#63464d;
+$chocolate:#2c251b;
+$light_yellow:#faf2b5;
+$green:#55572d;
+
+$background_inside:$light_purple;
+$background_outside:$purple;
+$frame_border:$purple;
+$frame_box_shadow:$purple;
+$logo:$chocolate;
+$active_menu_link:$chocolate;
+$active_content:white;
+$inactive_menu_link:white;
+$inactive_menu_link_shadow:$chocolate;
+$span_border:$green;
+$header_background_light:$green;
+$header_background_dark:$green;
+$header:white;
+$header_shadow:$chocolate;
+$content:white;
 
 html {
 	height:100%;
@@ -44,8 +76,8 @@ html {
 			text-decoration:none;
 		}
 		background:-webkit-radial-gradient($background_outside, $background_inside);
-		/* Custom CSS */
 		
+		/* Custom CSS */		
 		.frame {
 			margin:20px auto;
 			width:960px;
@@ -65,20 +97,28 @@ html {
 				}
 				.menu ul {
 					float:right;
-					margin:40px 0px 0px;
+					margin:40px 0px 0px;	
 					li {
 						float:left;
 						margin:0px 0px 0px 10px;
 						padding:10px 20px 9px 20px;
 						border:1px solid $frame_border;
-						border-bottom:1px solid $content;
 						border-top-right-radius:4px;
 						border-top-left-radius:4px;
-						background:$content;
+						background:-webkit-linear-gradient(top,$light_purple,$purple);
 				    /*box-shadow: 0 -10px 10px $blue3, 10px -10px 10px $blue3, -10px -10px 10px $blue3;*/
 						font-size:20px;
 						a {
-							color:$menu_link;
+							color:$inactive_menu_link;
+							text-shadow:0px 0px 7px $inactive_menu_link_shadow;
+						}
+					}
+					li.active {
+						background:$active_content;
+						border-bottom:1px solid $active_content;
+						a {
+							color:$active_menu_link;
+							text-shadow:none;
 						}
 					}
 				}
@@ -104,17 +144,20 @@ html {
 				.span12, .span6 {
 					border:1px solid $span_border;
 					border-radius:4px;
-					padding:10px 0px;
+
 					margin:0px 10px 20px;
 					float:left;
 
 					p, li {
-						padding:10px 10px 5px;
+						padding:10px 10px 10px;
 					}
 					h1 {
 						font-size:25px;
-						padding:5px 10px 10px;
+						padding:15px 10px;
 						border-bottom:1px solid $span_border;
+						background:-webkit-linear-gradient($header_background_light,$header_background_dark);
+						color:$header;
+						text-shadow:0px 0px 7px $header_shadow;
 					}
 				}
 			}		
