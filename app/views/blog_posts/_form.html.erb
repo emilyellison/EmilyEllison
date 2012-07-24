@@ -11,8 +11,7 @@
 	<%= f.label :title %>
 	<%= f.text_field :title %>
 	<%= f.label :content %>
-	<%= f.text_area :content %>
-	<br/><br/>
+	<%= f.text_area :content %><br/><br/>
 	<% if @blog_post.new_record? %>
 		<%= f.submit 'Add Blog Post', class: 'button' %>
 	<% else %>

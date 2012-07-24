@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   
   before_filter :find_current_location
+  before_filter :find_logged_in_user
   
   def find_current_location
     @current_location = request.path_parameters
@@ -15,8 +16,14 @@ class ApplicationController < ActionController::Base
       end
     elsif controller == 'inquiries' && action == 'new'
       @hire_page = 'active'
-    elsif controller == 'blog_posts' && (action == 'index' || action == 'show')
+    elsif controller == 'blog_posts'
       @blog_page = 'active'
+    elsif controller == 'admin'
+      @admin_page = 'active'
     end
+  end
+  
+  def find_logged_in_user
+    @current_user = User.find_by_id(session[:uid])
   end
 end
