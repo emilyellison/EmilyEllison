@@ -7,5 +7,7 @@ EmilyEllison::Application.routes.draw do
 
   get '/hire' => 'inquiries#new', as: :new_inquiry
   post '/hire' => 'inquiries#create'
+  
+  resources :blog_posts
 
 end

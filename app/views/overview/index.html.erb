@@ -17,8 +17,8 @@
 <div class='span6'>
 	<h1>Recent Articles</h1>
 	<ul>
-		<li><%= link_to 'Why Twitter Bootstrap is Cool', '#' %></li>
-		<li><%= link_to 'How to Transform Checkboxes in to Buttons', '#' %></li>
-		<li><%= link_to 'Setting Up Rails on My Machine', '#' %></li>
+		<% @blog_posts.reverse.each do |blog_post| %>
+			<li><%= link_to blog_post.title, blog_post_url(blog_post.id) %></li>
+		<% end %>
 	</ul>
 </div>

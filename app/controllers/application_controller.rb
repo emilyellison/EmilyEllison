@@ -15,6 +15,8 @@ class ApplicationController < ActionController::Base
       end
     elsif controller == 'inquiries' && action == 'new'
       @hire_page = 'active'
+    elsif controller == 'blog_posts' && (action == 'index' || action == 'show')
+      @blog_page = 'active'
     end
   end
 end

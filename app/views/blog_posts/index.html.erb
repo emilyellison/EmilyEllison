@@ -1,0 +1,8 @@
+<div class='span12'>
+	<h1>Blog</h1>
+	<% @blog_posts.each do |blog_post| %>
+		<h2><%= link_to blog_post.title, blog_post_url(blog_post.id) %></h2>
+		<p><%= blog_post.content %></p>
+		<hr/>
+	<% end %>
+</div>

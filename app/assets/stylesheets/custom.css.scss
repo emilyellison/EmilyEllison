@@ -1,85 +1,44 @@
-/*$dark_purple:#301C33;
-$purple:#613766;
-$dark_green:#008C4B;
-$green:#00BF66;
-$yellow:#F2BB00;*/
-
-/*$beige:#F6E6CE;
-$lightpink:#FEF1E0;
-$olive:#8B7325;
-
-$lightblue:#8aaeae;
-$greyblue:#497cbe;
-$blue:#016a8E;
-$darkblue:#012e3d;
-$darkgreen:#75821b;
-$green:#99a923;
-$lightgreen:#ccba27;*/
-
-/*$blue01:#EBFFFF;
-$blue0:#DEFFFF;
-$blue1:#BDF2F2;
-$blue2:#63bfbf;
-$blue3:#3f8c8c;
-$blue4:#255959;
-$blue5:#062626;*/
-
-/*$background_inside:$blue0;
-$background_outside:$blue2;
-$frame_border:$blue2;
-$frame_box_shadow:$blue3;
-$logo:$blue5;
-$menu_link:$blue4;
-$content:white;
-$span_border:$blue2;
-$header_background_light:$blue01;
-$header_background_dark:$blue1;*/
-
-/*$yellow:#FFED90;
-$purple:#4D4169;
-$dark_purple:#341139;
-$light_green:#BED4A1;
-$green:#A8D46F;
-$dark_green:#359668;
-*/
-
-/*$light_purple:#cfbfbd;
-$purple:#63464d;
-$chocolate:#2c251b;
-$light_yellow:#faf2b5;
-$green:#55572d;*/
-
-$light_teal:#89CCC8;
-$teal:#5CCCC5;
-$dark_teal:#3F8C87;
-
-$lighter_purple:#E8Cfff;
-$light_purple:#BB90DE;
-$purple:#963EDE;
-$dark_purple:#542578;
-
-$charcoal:#2D3940;
+$light_charcoal:#7494A6;
+$charcoal:#222B30;
 
 
-$background_inside:$light_teal;
-$background_outside:$teal;
-$frame_border:$dark_teal;
-$frame_box_shadow:$dark_teal;
-$logo:$charcoal;
-$active_menu_link:$purple;
-$active_menu_link_hover:$light_purple;
-$active_content:white;
-$inactive_menu_light:$light_purple;
-$inactive_menu_dark:$purple;
+$white_blue:#F2F6FF;
+$grey_blue:#46557F;
+$lighter_blue:#B2C7FF;
+$light_blue:#8DABFF;
+$blue:#4072FF;
+$dark_blue:#335CCC;
+$darker_blue:#20397F;
+$darker_purple:#7100B2;
+$dark_purple:#A100FF;
+$purple:#C259FF;
+
+$frame_border:$charcoal;
+$frame_box_shadow:$charcoal;
+$logo:white;
+$active_menu_link:$dark_purple;
+$active_menu_link_hover:$purple;
+$active_menu:$white_blue;
+$inactive_menu_light:$dark_blue;
+$inactive_menu_dark:$darker_blue;
 $inactive_menu_link:white;
-$inactive_menu_link_hover:$lighter_purple;
+$inactive_menu_link_hover:$white_blue;
 $inactive_menu_link_shadow:black;
-$span_border:$dark_teal;
-$header_background_light:$teal;
-$header_background_dark:$dark_teal;
+$span_border:$light_charcoal;
+$span_content:white;
+$span_shadow:$lighter_blue;
+$header_background_light:$blue;
+$header_background_dark:$darker_blue;
 $header:white;
 $header_shadow:black;
-$content:white;
+$sub_header:$dark_purple;
+$content:$white_blue;
+$link:$dark_purple;
+$link_hover:$purple;
+$input_border:$grey_blue;
+$button_light:$purple;
+$button_dark:$darker_purple;
+$button_border:$darker_purple;
 
 html {
 	height:100%;
@@ -91,8 +50,8 @@ html {
 		a {
 			text-decoration:none;
 		}
-		background:-webkit-radial-gradient($background_outside, $background_inside);
-		
+		/*background:-webkit-radial-gradient($background_outside, $background_inside);*/
+		background:url('random_grey_variations.png');
 		/* Custom CSS */		
 		.frame {
 			margin:20px auto;
@@ -108,7 +67,7 @@ html {
 					a {
 						color:$logo;
 						font-weight:bold;
-						
+						text-shadow:1px 1px 5px black;
 					}
 				}
 				.menu ul {
@@ -126,15 +85,15 @@ html {
 						font-size:20px;
 						a {
 							color:$inactive_menu_link;
-							text-shadow:0px 0px 7px $inactive_menu_link_shadow;
+							text-shadow:1px 1px 10px $inactive_menu_link_shadow;
 						}
 						a:hover {
 							color:$inactive_menu_link_hover;
 						}
 					}
 					li.active {
-						background:$active_content;
-						border-bottom:1px solid $active_content;
+						background:$active_menu;
+						border-bottom:1px solid $active_menu;
 						a {
 							color:$active_menu_link;
 							text-shadow:none;
@@ -153,19 +112,8 @@ html {
 				background:$content;
 				box-shadow:0px 0px 30px $frame_box_shadow;
 				padding:20px 10px;
-				p, li {
-					font-size:18px;
-					padding:5px 0px;
-				}
-				a {
-					color:$purple;
-					font-weight:bold;
-				}
-				a:hover {
-					color:$light_purple;
-				}
 				form {
-					padding:10px 10px;
+					padding:10px 15px;
 					input, label, textarea {
 						padding:5px 0px;
 						display:block;
@@ -173,15 +121,15 @@ html {
 					}
 					input, textarea {
 						width:400px;
-						border:1px solid $dark_teal;
+						border:1px solid $input_border;
 						border-radius:4px;
 					}
 					.button {
 						width:auto;
 						padding:10px 20px;
 						color:white;
-						background:-webkit-linear-gradient($light_purple,$purple);
-						border:1px solid $dark_purple;
+						background:-webkit-linear-gradient($button_light,$button_dark);
+						border:1px solid $button_border;
 						text-shadow:0px 0px 5px black;
 					}
 				}
@@ -200,24 +148,35 @@ html {
 				.span12, .span6, .span8, .span4 {
 					border:1px solid $span_border;
 					border-radius:4px;
-					box-shadow:3px 3px 3px lightgrey;
+					box-shadow:3px 3px 3px $span_shadow;
 					margin:0px 10px 20px;
 					float:left;
-
+					background:$span_content;
+					padding-bottom:10px;
 					p, li {
-						padding:10px 10px 10px;
+						line-height:22px;
+						font-size:18px;
+						padding:10px 15px 10px;
 					}
 					h1 {
-						font-size:25px;
-						padding:15px 10px;
+						font-size:22px;
+						padding:10px 15px;
 						border-bottom:1px solid $span_border;
 						background:-webkit-linear-gradient($header_background_light,$header_background_dark);
 						color:$header;
-						text-shadow:0px 0px 7px $header_shadow;
+						text-shadow:1px 1px 10px $header_shadow;
+						margin-bottom:10px;
 					}
 					h2 {
+						color:$sub_header;
 						font-size:20px;
-						padding:15px 10px;
+						padding:15px 15px;
+					}
+					a {
+						color:$link;
+					}
+					a:hover {
+						color:$link_hover;
 					}
 				}
 			}
