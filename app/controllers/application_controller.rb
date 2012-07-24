@@ -26,4 +26,8 @@ class ApplicationController < ActionController::Base
   def find_logged_in_user
     @current_user = User.find_by_id(session[:uid])
   end
+  
+  def ensure_administrator
+    @current_user.admin == true
+  end
 end

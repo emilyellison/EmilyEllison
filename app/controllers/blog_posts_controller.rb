@@ -1,5 +1,7 @@
 class BlogPostsController < ApplicationController
   
+  before_filter :ensure_administrator, only: [ :new, :create, :edit, :update, :destroy ]
+  
   def index
     @blog_posts = BlogPost.all
   end
