@@ -15,11 +15,11 @@
 				</div>
 				<div class='menu'>
 					<ul>
-						<li class='active'><%= link_to 'Home', root_url %></li>
-						<li><%= link_to 'Portfolio', '#' %></li>
-						<li><%= link_to 'About', about_url %></li>
-						<li><%= link_to 'Blog', '#' %></li>
-						<li><%= link_to 'Hire', '#' %></li>
+						<li class='<%= @home_page %>'><%= link_to 'Home', root_url %></li>
+						<li class='<%= @portfolio_page %>'><%= link_to 'Portfolio', '#' %></li>
+						<li class='<%= @about_page %>'><%= link_to 'About', about_url %></li>
+						<li class='<%= @blog_page %>'><%= link_to 'Blog', '#' %></li>
+						<li class='<%= @hire_page %>'><%= link_to 'Hire', '#' %></li>
 					</ul>
 				</div>
 			</header>
