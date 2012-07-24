@@ -1,5 +1,8 @@
 EmilyEllison::Application.routes.draw do
-
-  get '/' => 'overview#index'
+  
+  root to: 'overview#index'
+  
+  get '/home' => 'overview#index'
+  get '/about' => 'overview#about', as: :about
 
 end

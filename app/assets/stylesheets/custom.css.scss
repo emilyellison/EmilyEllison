@@ -141,7 +141,13 @@ html {
 				.span6 {
 					width:446px; /*TEST THIS LATER*/
 				}
-				.span12, .span6 {
+				.span8 {
+					width:600px;
+				}
+				.span4 {
+					width:290px;
+				}
+				.span12, .span6, .span8, .span4 {
 					border:1px solid $span_border;
 					border-radius:4px;
 
@@ -158,6 +164,10 @@ html {
 						background:-webkit-linear-gradient($header_background_light,$header_background_dark);
 						color:$header;
 						text-shadow:0px 0px 7px $header_shadow;
+					}
+					h2 {
+						font-size:20px;
+						padding:15px 10px;
 					}
 				}
 			}		
