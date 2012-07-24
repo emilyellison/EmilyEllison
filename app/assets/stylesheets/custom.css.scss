@@ -3,15 +3,16 @@ $charcoal:#222B30;
 
 
 $white_blue:#F2F6FF;
-$grey_blue:#46557F;
+$grey_blue:#515E7F;
 $lighter_blue:#B2C7FF;
-$light_blue:#8DABFF;
-$blue:#4072FF;
-$dark_blue:#335CCC;
-$darker_blue:#20397F;
-$darker_purple:#7100B2;
-$dark_purple:#A100FF;
-$purple:#C259FF;
+$light_blue:#A4BCFF;
+$blue:#5784FF;
+$dark_blue:#466ACC;
+$darker_blue:#2C427F;
+
+$darker_purple:#D92F00;
+$dark_purple:#FF4800;
+$purple:#FF6A00;
 
 $frame_border:$charcoal;
 $frame_box_shadow:$charcoal;
@@ -24,7 +25,7 @@ $inactive_menu_dark:$darker_blue;
 $inactive_menu_link:white;
 $inactive_menu_link_hover:$white_blue;
 $inactive_menu_link_shadow:black;
-$span_border:$light_charcoal;
+$span_border:$grey_blue;
 $span_content:white;
 $span_shadow:$lighter_blue;
 $header_background_light:$blue;
@@ -185,6 +186,7 @@ html {
 				ul {
 					li {
 						font-size:18px;
+						color:white;
 					}
 				}
 			}		
