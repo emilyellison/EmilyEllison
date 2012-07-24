@@ -1,6 +1,6 @@
 $light_charcoal:#7494A6;
 $charcoal:#222B30;
-
+$dark_charcoal:#181C26;
 
 $white_blue:#F2F6FF;
 $grey_blue:#515E7F;
@@ -9,19 +9,20 @@ $light_blue:#A4BCFF;
 $blue:#5784FF;
 $dark_blue:#466ACC;
 $darker_blue:#2C427F;
+$darkest_blue:#283C73;
 
 $darker_purple:#D92F00;
 $dark_purple:#FF4800;
 $purple:#FF6A00;
 
 $frame_border:$charcoal;
-$frame_box_shadow:$charcoal;
+$frame_box_shadow:$dark_charcoal;
 $logo:white;
 $active_menu_link:$dark_purple;
 $active_menu_link_hover:$purple;
 $active_menu:$white_blue;
 $inactive_menu_light:$dark_blue;
-$inactive_menu_dark:$darker_blue;
+$inactive_menu_dark:$darkest_blue;
 $inactive_menu_link:white;
 $inactive_menu_link_hover:$white_blue;
 $inactive_menu_link_shadow:black;
