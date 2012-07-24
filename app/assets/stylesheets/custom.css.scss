@@ -53,6 +53,7 @@ $light_teal:#89CCC8;
 $teal:#5CCCC5;
 $dark_teal:#3F8C87;
 
+$lighter_purple:#E8Cfff;
 $light_purple:#BB90DE;
 $purple:#963EDE;
 $dark_purple:#542578;
@@ -66,14 +67,18 @@ $frame_border:$dark_teal;
 $frame_box_shadow:$dark_teal;
 $logo:$charcoal;
 $active_menu_link:$purple;
+$active_menu_link_hover:$light_purple;
 $active_content:white;
+$inactive_menu_light:$light_purple;
+$inactive_menu_dark:$purple;
 $inactive_menu_link:white;
-$inactive_menu_link_shadow:$dark_purple;
+$inactive_menu_link_hover:$lighter_purple;
+$inactive_menu_link_shadow:black;
 $span_border:$dark_teal;
-$header_background_light:$light_teal;
-$header_background_dark:$teal;
-$header:$charcoal;
-$header_shadow:none;
+$header_background_light:$teal;
+$header_background_dark:$dark_teal;
+$header:white;
+$header_shadow:black;
 $content:white;
 
 html {
@@ -116,12 +121,15 @@ html {
 						border:1px solid $frame_border;
 						border-top-right-radius:4px;
 						border-top-left-radius:4px;
-						background:-webkit-linear-gradient(top,$light_purple,$purple);
+						background:-webkit-linear-gradient(top,$inactive_menu_light,$inactive_menu_dark);
 				    /*box-shadow: 0 -10px 10px $blue3, 10px -10px 10px $blue3, -10px -10px 10px $blue3;*/
 						font-size:20px;
 						a {
 							color:$inactive_menu_link;
 							text-shadow:0px 0px 7px $inactive_menu_link_shadow;
+						}
+						a:hover {
+							color:$inactive_menu_link_hover;
 						}
 					}
 					li.active {
@@ -130,6 +138,9 @@ html {
 						a {
 							color:$active_menu_link;
 							text-shadow:none;
+						}
+						a:hover {
+							color:$active_menu_link_hover;
 						}
 					}
 				}
@@ -145,6 +156,13 @@ html {
 				p, li {
 					font-size:18px;
 					padding:5px 0px;
+				}
+				a {
+					color:$purple;
+					font-weight:bold;
+				}
+				a:hover {
+					color:$light_purple;
 				}
 				.span12 {
 					width:916px; /*TEST THIS LATER*/
