@@ -43,26 +43,37 @@ $green:#A8D46F;
 $dark_green:#359668;
 */
 
-$light_purple:#cfbfbd;
+/*$light_purple:#cfbfbd;
 $purple:#63464d;
 $chocolate:#2c251b;
 $light_yellow:#faf2b5;
-$green:#55572d;
+$green:#55572d;*/
 
-$background_inside:$green;
-$background_outside:$green;
-$frame_border:$green;
-$frame_box_shadow:$green;
-$logo:white;
-$active_menu_link:$chocolate;
+$light_teal:#89CCC8;
+$teal:#5CCCC5;
+$dark_teal:#3F8C87;
+
+$light_purple:#BB90DE;
+$purple:#963EDE;
+$dark_purple:#542578;
+
+$charcoal:#2D3940;
+
+
+$background_inside:$light_teal;
+$background_outside:$teal;
+$frame_border:$dark_teal;
+$frame_box_shadow:$dark_teal;
+$logo:$charcoal;
+$active_menu_link:$purple;
 $active_content:white;
 $inactive_menu_link:white;
-$inactive_menu_link_shadow:$chocolate;
-$span_border:$green;
-$header_background_light:$purple;
+$inactive_menu_link_shadow:$dark_purple;
+$span_border:$purple;
+$header_background_light:$light_purple;
 $header_background_dark:$purple;
 $header:white;
-$header_shadow:$chocolate;
+$header_shadow:$dark_purple;
 $content:white;
 
 html {
