@@ -19,7 +19,7 @@
 						<li class='<%= @portfolio_page %>'><%= link_to 'Portfolio', '#' %></li>
 						<li class='<%= @about_page %>'><%= link_to 'About', about_url %></li>
 						<li class='<%= @blog_page %>'><%= link_to 'Blog', '#' %></li>
-						<li class='<%= @hire_page %>'><%= link_to 'Hire', '#' %></li>
+						<li class='<%= @hire_page %>'><%= link_to 'Hire', new_inquiry_url %></li>
 					</ul>
 				</div>
 			</header>
@@ -28,6 +28,11 @@
 					<%= yield %>
 				</div>
 			</div>
+			<footer>
+				<ul>
+					<li>&copy; 2012 Emily Ellison</li>
+				</ul>
+			</footer>
 		</div>
 	</body>
 </html>

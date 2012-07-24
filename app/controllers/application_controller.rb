@@ -13,6 +13,8 @@ class ApplicationController < ActionController::Base
       elsif action == 'about'
         @about_page = 'active'
       end
+    elsif controller == 'inquiries' && action == 'new'
+      @hire_page = 'active'
     end
   end
 end

@@ -146,7 +146,7 @@ html {
 				}
 			}
 			.content {
-				height:600px;
+				height:700px;
 				border:1px solid $frame_border;
 				border-radius:4px;
 				border-top-right-radius:0px;
@@ -163,6 +163,27 @@ html {
 				}
 				a:hover {
 					color:$light_purple;
+				}
+				form {
+					padding:10px 10px;
+					input, label, textarea {
+						padding:5px 0px;
+						display:block;
+						font-size:18px;
+					}
+					input, textarea {
+						width:400px;
+						border:1px solid $dark_teal;
+						border-radius:4px;
+					}
+					.button {
+						width:auto;
+						padding:10px 20px;
+						color:white;
+						background:-webkit-linear-gradient($light_purple,$purple);
+						border:1px solid $dark_purple;
+						text-shadow:0px 0px 5px black;
+					}
 				}
 				.span12 {
 					width:916px; /*TEST THIS LATER*/
@@ -197,6 +218,14 @@ html {
 					h2 {
 						font-size:20px;
 						padding:15px 10px;
+					}
+				}
+			}
+			footer {
+				padding:20px 10px;
+				ul {
+					li {
+						font-size:18px;
 					}
 				}
 			}		

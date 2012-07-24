@@ -1,0 +1,31 @@
+<div class='span8'>
+	<h1>Proposal</h1>
+	<h2>How can I help?</h2>
+	<p>
+		If you need help building out your dream website, 
+		or you'd just like to introduce yourself, fill 
+		out the contact form, and I'll be in touch as soon as 
+		I can. Thanks!
+	</p>
+	<%= form_for @inquiry, url: new_inquiry_url do |f| %>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+		<%= f.label :email, 'E-mail' %>
+		<%= f.text_field :email %>
+		<%= f.label :message %>
+		<%= f.text_area :message, rows: 14 %><br/><br/>	
+		<%= f.submit 'Send', class: 'button' %>	
+	<% end %>
+</div>
+<div class='span4'>
+	<h1>Contact Information</h1>
+	<h2>Emily Ellison</h2>
+	<p>(312) 810-7808</p>
+	<p>emilyellison986@gmail.com</p>
+	<p>Chicago, IL</p>
+	<h2>Profiles</h2>
+	<p>
+		<%= link_to image_tag('linked_in_profile.jpeg', width: 50), "http://www.linkedin.com/in/emilyellison986" %>
+		<%= link_to image_tag('twitter_profile.png', width: 50), "http://www.linkedin.com/in/emilyellison986" %>
+	</p>
+</div>
