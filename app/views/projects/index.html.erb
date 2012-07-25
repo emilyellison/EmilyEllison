@@ -2,12 +2,12 @@
 	<h1>Portfolio</h1>
 	<% @projects.each do |project| %>
 		<h2><%= project.title %></h2>
-		<%= image_tag project.image %>
-		<p><%= project.when %></p>
-		<p><%= project.website %></p>
-		<p><%= project.github %></p>
+		<div class='condensed'>
+			<p>Website: <%= link_to project.website, project.website %></p>
+			<p>Github: <%= link_to project.github, project.github %></p>
+		</div>
 		<p><%= project.description %></p>
-		<p><%= project.tools %></p>
+		<p>Tools: <%= project.tools %></p>
 	<% end %>
 </div>
 
