@@ -2,7 +2,7 @@
 	<h1>Blog</h1>
 	<% @blog_posts.each do |blog_post| %>
 		<h2><%= link_to blog_post.title, blog_post_url(blog_post.id) %></h2>
-		<p><%= blog_post.content %></p>
+		<p><%= Markdown.new(truncate(blog_post.content, length: 210)).to_html.html_safe %></p>
 		<hr/>
 	<% end %>
 </div>
