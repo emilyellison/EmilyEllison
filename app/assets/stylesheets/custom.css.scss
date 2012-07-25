@@ -185,6 +185,7 @@ html {
 						input, textarea {
 							width:400px;
 							border:1px solid $input_border;
+							box-shadow:1px 1px 4px lightgrey inset;
 							border-radius:4px;
 							font-family:'pontano sans';
 							padding:0px 5px;
@@ -198,6 +199,7 @@ html {
 						border:1px solid $button_border;
 						text-shadow:0px 0px 5px black;
 						border-radius:4px;
+						box-shadow:none;
 					}
 				}
 				.alert-error {
@@ -233,6 +235,17 @@ html {
 				.icon {
 					width:25px;
 					padding-right:10px;
+				}
+				.web_developer_paragraph {
+					float:left;
+					width:575px;
+				}
+				.web_developer_image {
+					float:right;
+					margin:15px 20px;
+					border-radius:4px;
+					border:1px solid $light_charcoal;
+					box-shadow:3px 3px 3px lightgrey;
 				}
 			}
 			footer {
