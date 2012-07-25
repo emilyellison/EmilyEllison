@@ -1,3 +1,4 @@
+$lighter_charcoal:#86AABF;
 $light_charcoal:#7494A6;
 $charcoal:#222B30;
 $dark_charcoal:#181C26;
@@ -37,7 +38,7 @@ $sub_header:$dark_purple;
 $content:$white_blue;
 $link:$dark_purple;
 $link_hover:$purple;
-$input_border:$grey_blue;
+$input_border:$lighter_charcoal;
 $button_light:$purple;
 $button_dark:$darker_purple;
 $button_border:$darker_purple;
@@ -53,7 +54,7 @@ html {
 			text-decoration:none;
 		}
 		/*background:-webkit-radial-gradient($background_outside, $background_inside);*/
-		background:url('random_grey_variations.png');
+		background:url('low_contrast_linen.png');
 		/* Custom CSS */		
 		.frame {
 			margin:20px auto;
