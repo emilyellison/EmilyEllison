@@ -3,7 +3,7 @@ class ProjectsController < ApplicationController
   before_filter :ensure_administrator, only: [ :new, :create, :edit, :update, :destroy ]
   
   def index
-    @projects = Project.all
+    @projects = Project.order('created_at desc').all
   end
   
   def new
