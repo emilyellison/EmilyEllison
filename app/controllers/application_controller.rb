@@ -16,6 +16,8 @@ class ApplicationController < ActionController::Base
       elsif action == 'about'
         @about_page = 'active'
       end
+    elsif controller == 'projects'
+      @portfolio_page = 'active'
     elsif controller == 'blog_posts'
       @blog_page = 'active'
     elsif controller == 'inquiries' && action == 'new'

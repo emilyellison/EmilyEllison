@@ -9,6 +9,7 @@ EmilyEllison::Application.routes.draw do
   post '/hire' => 'inquiries#create'
   
   resources :blog_posts
+  resources :projects
   
   get '/sign_in' => 'sessions#new', as: :sign_in
   post '/sign_in' => 'sessions#create'

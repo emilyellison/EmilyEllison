@@ -34,7 +34,7 @@ class BlogPostsController < ApplicationController
       flash[:success] = 'Your blog post has been updated!'
       redirect_to blog_post_url(@blog_post.id)
     else
-      render :new
+      render :edit
     end
   end
   
