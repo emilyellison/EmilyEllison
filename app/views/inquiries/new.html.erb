@@ -19,13 +19,5 @@
 </div>
 <div class='span4'>
 	<h1>Contact Information</h1>
-	<h2>Emily Ellison</h2>
-	<p>(312) 810-7808</p>
-	<p>emilyellison986@gmail.com</p>
-	<p>Chicago, IL</p>
-	<h2>Profiles</h2>
-	<p>
-		<%= link_to image_tag('linked_in_profile.jpeg', width: 50), "http://www.linkedin.com/in/emilyellison986" %>
-		<%= link_to image_tag('twitter_profile.png', width: 50), "https://twitter.com/emilyellison986" %>
-	</p>
+	<%= render 'overview/contact_info' %>
 </div>
