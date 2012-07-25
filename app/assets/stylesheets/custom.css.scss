@@ -151,7 +151,22 @@ html {
 					h2 {
 						color:$sub_header;
 						font-size:20px;
-						padding:15px 15px;
+						padding:10px 15px;
+					}
+					h4 {
+						padding:10px 15px;
+						font-weight:bold;
+						font-size:18px;
+					}
+					pre {
+						border:1px solid $light_blue;
+						border-radius:4px;
+						background:$white_blue;
+						font-family:monaco;
+						line-height:22px;
+						font-size:16px;
+						margin:10px 15px 10px;
+						padding:10px 10px;
 					}
 					a {
 						color:$link;
