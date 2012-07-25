@@ -17,7 +17,7 @@
 <div class='span6'>
 	<h1>Recent Articles</h1>
 	<ul>
-		<% @blog_posts.reverse.each do |blog_post| %>
+		<% @blog_posts.each do |blog_post| %>
 			<li><%= link_to blog_post.title, blog_post_url(blog_post.id) %></li>
 		<% end %>
 	</ul>
