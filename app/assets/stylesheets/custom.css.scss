@@ -114,19 +114,6 @@ html {
 				background:$content;
 				box-shadow:0px 0px 40px $frame_box_shadow;
 				padding:20px 10px;
-				form {
-					padding:10px 15px;
-					input, label, textarea {
-						padding:5px 0px;
-						display:block;
-						font-size:18px;
-					}
-					input, textarea {
-						width:400px;
-						border:1px solid $input_border;
-						border-radius:4px;
-					}
-				}
 				.span12 {
 					width:916px; /*TEST THIS LATER*/
 				}
@@ -172,6 +159,19 @@ html {
 					a:hover {
 						color:$link_hover;
 					}
+					form {
+						padding:10px 15px;
+						input, label, textarea {
+							padding:5px 0px;
+							display:block;
+							font-size:18px;
+						}
+						input, textarea {
+							width:400px;
+							border:1px solid $input_border;
+							border-radius:4px;
+						}
+					}
 					.button {
 						width:auto;
 						padding:10px 20px;
@@ -180,6 +180,32 @@ html {
 						border:1px solid $button_border;
 						text-shadow:0px 0px 5px black;
 						border-radius:4px;
+					}
+				}
+				.alert-error {
+					border:1px solid red;	
+					color:darkred;
+					background:pink;	
+				}
+				.alert-success {
+					border:1px solid green;
+					color:darkgreen;
+					background:lightgreen;
+				}
+				.alert-notice {
+					border:1px solid $blue;
+					color:$darker_blue;
+					background:$light_blue;
+				}
+				.alert-error, .alert-notice, .alert-success {
+					margin:0px 10px 20px;
+					padding:10px 15px;
+					border-radius:4px;			
+					p {
+						margin-left:15p;
+						line-height:22px;
+						font-size:18px;
+						padding:10px 15px 10px;
 					}
 				}
 			}

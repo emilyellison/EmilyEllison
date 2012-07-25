@@ -28,6 +28,15 @@
 			</header>
 			<div class='content'>
 				<div class='content_wrap'>
+					<% if flash[:success] %>
+						<p class='alert-success'><%= flash[:success] %></p>
+					<% end %>
+					<% if flash[:notice] %>
+						<p class='alert-notice'><%= flash[:notice] %></p>
+					<% end %>
+					<% if flash[:error] %>
+						<p class='alert-error'><%= flash[:error] %></p>
+					<% end %>
 					<%= yield %>
 				</div>
 			</div>
