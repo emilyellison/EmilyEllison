@@ -3,7 +3,7 @@ class BlogPostsController < ApplicationController
   before_filter :ensure_administrator, only: [ :new, :create, :edit, :update, :destroy ]
   
   def index
-    @blog_posts = BlogPost.order('created_at desc').limit(5).all
+    @blog_posts = BlogPost.order('created_at desc').limit(3).all
   end
   
   def new
