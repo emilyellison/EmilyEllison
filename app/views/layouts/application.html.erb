@@ -9,44 +9,14 @@
 	</head>
 	<body>
 		<div class='frame'>
-			<header>
-				<div class='logo'>
-					<%= link_to 'Emily Ellison', root_url %>
-				</div>
-				<div class='menu'>
-					<ul>
-						<li class='<%= @home_page %>'><%= link_to 'Home', root_url %></li>
-						<li class='<%= @portfolio_page %>'><%= link_to 'Portfolio', projects_url %></li>
-						<li class='<%= @about_page %>'><%= link_to 'About', about_url %></li>
-						<li class='<%= @blog_page %>'><%= link_to 'Blog', blog_posts_url %></li>
-						<li class='<%= @hire_page %>'><%= link_to 'Hire', new_inquiry_url %></li>
-						<% if @current_user && @current_user.admin == true %>
-							<li class='<%= @admin_page %>'><%= link_to 'Admin', admin_url %></li>
-						<% end %>
-					</ul>
-				</div>
-			</header>
+			<%= render 'layouts/header' %>
 			<div class='content'>
 				<div class='content_wrap'>
-					<% if flash[:success] %>
-						<p class='alert-success'><%= flash[:success] %></p>
-					<% end %>
-					<% if flash[:notice] %>
-						<p class='alert-notice'><%= flash[:notice] %></p>
-					<% end %>
-					<% if flash[:error] %>
-						<p class='alert-error'><%= flash[:error] %></p>
-					<% end %>
+					<%= render 'layouts/errors' %>
 					<%= yield %>
 				</div>
 			</div>
-			<footer>
-				<ul>
-					<li class='pull-left'>&copy; 2012 Emily Ellison</li>
-					<li class='pull-right'><a href="https://twitter.com/emilyellison986" class="twitter-follow-button" data-show-count="false">Follow @emilyellison986</a>
-					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></li>
-				</ul>
-			</footer>
+			<%= render 'layouts/footer' %>
 		</div>
 	</body>
 </html>
