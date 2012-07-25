@@ -14,4 +14,5 @@ EmilyEllison::Application.routes.draw do
   post '/sign_in' => 'sessions#create'
   get '/sign_out' => 'sessions#destroy', as: :sign_out
   
+  get '/admin' => 'admin#index', as: :admin
 end

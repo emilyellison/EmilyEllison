@@ -126,14 +126,6 @@ html {
 						border:1px solid $input_border;
 						border-radius:4px;
 					}
-					.button {
-						width:auto;
-						padding:10px 20px;
-						color:white;
-						background:-webkit-linear-gradient($button_light,$button_dark);
-						border:1px solid $button_border;
-						text-shadow:0px 0px 5px black;
-					}
 				}
 				.span12 {
 					width:916px; /*TEST THIS LATER*/
@@ -179,6 +171,15 @@ html {
 					}
 					a:hover {
 						color:$link_hover;
+					}
+					.button {
+						width:auto;
+						padding:10px 20px;
+						color:white;
+						background:-webkit-linear-gradient($button_light,$button_dark);
+						border:1px solid $button_border;
+						text-shadow:0px 0px 5px black;
+						border-radius:4px;
 					}
 				}
 			}
