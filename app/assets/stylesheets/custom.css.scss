@@ -130,7 +130,7 @@ html {
 				.span12, .span6, .span8, .span4 {
 					border:1px solid $span_border;
 					border-radius:4px;
-					box-shadow:3px 3px 3px $span_shadow;
+					box-shadow:3px 3px 4px $span_shadow;
 					margin:0px 10px 20px;
 					float:left;
 					background:$span_content;
@@ -156,6 +156,16 @@ html {
 						color:$sub_header;
 						font-size:20px;
 						padding:10px 15px;
+						.edit_delete {
+							float:right;
+							a {
+								padding:5px 10px;
+								border:1px solid #B2C9FF;
+								border-radius:4px;
+								background:-webkit-linear-gradient($white_blue, #D9E4FF);
+								
+							}
+						}
 					}
 					h4 {
 						padding:10px 15px;
@@ -248,7 +258,7 @@ html {
 					margin:15px 20px;
 					border-radius:4px;
 					border:1px solid $light_charcoal;
-					box-shadow:3px 3px 3px lightgrey;
+					box-shadow:3px 3px 4px lightgrey;
 				}
 				.condensed {
 					p {
