@@ -33,7 +33,11 @@
 									<li><%= function %></li>
 								<% end %>
 							</ul>
-							<%= image_tag project.image, width:880 %>
+							<% if project.video.blank? %>
+								<%= image_tag project.image, width:880 %>
+							<% else %>
+								<%= project.video.html_safe %>
+							<% end %>
 						</div>
 					</div>
 				 <% end %>

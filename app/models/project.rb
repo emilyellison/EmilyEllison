@@ -1,3 +1,3 @@
 class Project < ActiveRecord::Base
-  attr_accessible :description, :functionality, :github, :image, :title, :tools, :website, :when
+  attr_accessible :description, :functionality, :github, :image, :title, :tools, :website, :when, :video
 end
