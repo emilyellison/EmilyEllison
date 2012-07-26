@@ -1,22 +1,45 @@
 <div class='span12'>
-	<h1>Portfolio</h1>
-	<% @projects.each do |project| %>
-		<h2>
-			<%= project.title %>
-			<% if @current_user && @current_user.admin == true %>
-				<span class='edit_delete'>
-					<%= link_to '&#9998;'.html_safe, edit_project_url(project.id) %>
-					<%= link_to '&#9851;'.html_safe, project_url(project.id), method: :delete, confirm: 'Are you sure you want to delete this blog post?' %>
-				</span>
-			<% end %>
-		</h2>
-		<div class='condensed'>
-			<p>Website: <%= link_to project.website, project.website %></p>
-			<p>Github: <%= link_to project.github, project.github %></p>
-		</div>
-		<p><%= project.description %></p>
-		<p>Tools: <%= project.tools %></p>
-		<hr/>
-	<% end %>
+	<div id="carousel">
+		<h1>
+			Portfolio
+			<div id="buttons">
+	      <a href="#" id="prev">&lsaquo;</a>
+	      <a href="#" id="next">&rsaquo;</a>
+	      <div class="clear"></div>
+	    </div>
+		</h1>
+    <div class="clear"></div>
+    <div id="slides"> 
+       <div class='list'>
+				 <% @projects.each do |project| %>
+           <div class='list_items'>
+						<h2>
+							<%= project.title %>
+							<% if @current_user && @current_user.admin == true %>
+								<span class='edit_delete'>
+									<%= link_to '&#9998;'.html_safe, edit_project_url(project.id) %>
+									<%= link_to '&#9851;'.html_safe, project_url(project.id), method: :delete, confirm: 'Are you sure you want to delete this blog post?' %>
+								</span>
+							<% end %>
+						</h2>
+						<div class='condensed'>
+							<p><%= project.description %></p>
+							<p>Website: <%= link_to project.website, project.website %></p>
+							<p>Github: <%= link_to project.github, project.github %></p>				
+							<p>Tools: <%= project.tools %></p>
+							<h4>Features</h4>
+							<ul>
+								<% project.functionality.split(' * ').each do |function| %>
+									<li><%= function %></li>
+								<% end %>
+							</ul>
+							<%= image_tag project.image, width:880 %>
+						</div>
+					</div>
+				 <% end %>
+       </div>
+       <div class="clear"></div>
+    </div>
+	</div>
 </div>
 

@@ -236,9 +236,8 @@ html {
 					padding:10px 15px;
 					border-radius:4px;			
 					p {
-						margin-left:15p;
+						margin-left:15px;
 						line-height:22px;
-						font-size:18px;
 						padding:10px 15px 10px;
 					}
 				}
@@ -255,10 +254,11 @@ html {
 					width:575px;
 					p, li {
 						padding:5px 15px;
+						font-size:18px;
 					}
 					ul {
 						float:left;
-						padding-right:20px;
+						padding-right:15px;
 					}
 				}
 				.web_developer_image {
@@ -270,8 +270,59 @@ html {
 				}
 				.condensed {
 					p {
-						padding:2px 15px;
+						padding:5px 15px;
 					}
+				}
+				#carousel {
+			    width:916px;
+			    height:900px;   
+			    margin:0 auto;
+					#slides {
+						color:black;
+					    overflow:hidden;
+					    /* fix ie overflow issue */
+					    position:relative;
+					    width:916px;
+					    height:850px;
+							background:white;
+					}
+
+					/* remove the list styles, width : item width * total items */ 
+					#slides .list {
+					    position:relative;
+					    left:0;
+					    top:0;
+					    list-style:none;
+					    margin:0;
+					    padding:0;  
+					    width:2748px;       
+					}
+
+					/* width of the item, in this case I put 250x250x gif */
+					#slides .list_items {
+					    width:916px;
+					    height:850px;   
+					    float:left;
+							padding:5px 0px;
+							li {
+								padding:5px 15px;
+							}
+					}
+
+					#slides .list_items img {
+					    margin:15px 15px;
+							border-radius:4px;
+							border:1px solid $lighter_charcoal;
+					}
+
+					/* Styling for prev and next buttons */
+					#buttons {
+					    padding:0px 0px 5px 0px;
+					  	margin:-15px 0px;
+					    float:right;	
+							font-size:50px;
+					}
+					.clear {clear:both}
 				}
 			}
 			footer {
