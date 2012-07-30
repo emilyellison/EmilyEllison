@@ -9,7 +9,7 @@ $(document).ready(function() {
 		// Project carousel.
 
     //rotation speed and timer
-    var speed = 5000;
+    var speed = 10000;
     var run = setInterval('rotate()', speed);   
      
     //grab the width and calculate left value
@@ -29,7 +29,7 @@ $(document).ready(function() {
         var left_indent = parseInt($('#slides .list').css('left')) + item_width;
  
         //slide the item            
-        $('#slides .list').animate({'left' : left_indent}, 300,function(){    
+        $('#slides .list').animate({'left' : left_indent}, 200,function(){    
  
             //move the last item and put it as first item               
             $('#slides .list_items:nth-child(1)').before($('#slides .list_items:last'));           
@@ -52,7 +52,7 @@ $(document).ready(function() {
         var left_indent = parseInt($('#slides .list').css('left')) - item_width;
          
         //slide the item
-        $('#slides .list').animate({'left' : left_indent}, 300, function () {
+        $('#slides .list').animate({'left' : left_indent}, 200, function () {
              
             //move the first item and put it as last item
             $('#slides .list_items:last').after($('#slides .list_items:nth-child(1)'));                  
