@@ -24,15 +24,12 @@
 	</div>
 	<%= image_tag 'emily_1.jpeg', width:298, class: 'web_developer_image' %>
 </div>
-
-
-
 <div class='span6'>
 	<h1>Recent Projects</h1>
 	<ul>
-		<li><%= link_to 'GitSetGo', '#' %></li>
-		<li><%= link_to 'BeerOn', '#' %></li>
-		<li><%= link_to '#caHack', '#' %></li>
+		<% @projects.each do |project| %>
+			<li><%= link_to project.title, project_url(project.id) %></li>
+		<% end %>
 	</ul>
 </div>
 <div class='span6'>
