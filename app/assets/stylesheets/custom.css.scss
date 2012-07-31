@@ -66,11 +66,19 @@ html {
 				background:transparent;
 				.logo {
 					float:left;
-					padding:20px 20px 0px;
-					font-size:40px;
-					a {
+					padding:10px 20px 0px;
+					h1 {
+						font-size:35px;
+						padding:5px 0px;
+						a {
+							color:$logo;
+							font-weight:bold;
+							text-shadow:1px 1px 5px black;
+						}
+					}
+					p {
+						font-size:18px;
 						color:$logo;
-						font-weight:bold;
 						text-shadow:1px 1px 5px black;
 					}
 				}
