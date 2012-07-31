@@ -1,3 +1,5 @@
+require 'open-uri'
+
 class OverviewController < ApplicationController
   
   def index
@@ -6,7 +8,7 @@ class OverviewController < ApplicationController
   end
   
   def about
-    
+    @tweet = JSON.parse(open('http://search.twitter.com/search.json?q=emilyellison986&rpp=5&include_entities=true&result_type=mixed').read)['results'][0]
   end
   
 end
