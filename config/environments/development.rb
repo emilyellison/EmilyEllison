@@ -33,8 +33,6 @@ EmilyEllison::Application.configure do
   config.assets.compress = false
 
   # Expands the lines which load the assets
-  config.assets.debug = false
-  
-  # Fix Development
-  config.assets.compile = true
+  config.assets.debug = true
+
 end
