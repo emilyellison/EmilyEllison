@@ -4,6 +4,12 @@
 	<div class='portfolio_text'>
 		<p><%= project.description %></p>			
 		<p>Tools: <%= project.tools %></p>
+		<h4>Features</h4>
+		<ul>
+		  <% project.functionality.split(' * ').each do |function| %>
+		  	<li><%= function %></li>
+		  <% end %>
+		</ul>	
 		<p>
 			<%= link_to image_tag('github_profile.jpeg', width: 50), project.github %>
 			<%= link_to 'LIVE', project.website, class: 'live_icon' %>
