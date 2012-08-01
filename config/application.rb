@@ -57,6 +57,6 @@ module EmilyEllison
     config.assets.version = '1.0'
     
     # Fix Heroku Precompile
-    config.assets.initialize_on_precompile = false
+    config.assets.debug = false
   end
 end
