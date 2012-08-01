@@ -1,43 +1,18 @@
+<% @projects.each do |project| %>   
 <div class='span12'>
-	<div id="carousel">
-		<h1>
-			Portfolio
-			<div id="buttons">
-	      <a href="#" id="prev">&lsaquo;</a>
-	      <a href="#" id="next">&rsaquo;</a>
-	      <div class="clear"></div>
-	    </div>
-		</h1>
-    <div class="clear"></div>
-    <div id="slides"> 
-       <div class='list'>
-				 <% @projects.each do |project| %>
-           <div class='list_items'>
-						<h2>
-							<%= project.title %>
-						</h2>
-						<div class='condensed'>
-							<p><%= project.description %></p>
-							<p>Website: <%= link_to project.website, project.website %></p>
-							<p>Github: <%= link_to project.github, project.github %></p>				
-							<p>Tools: <%= project.tools %></p>
-							<h4>Features</h4>
-							<ul>
-								<% project.functionality.split(' * ').each do |function| %>
-									<li><%= function %></li>
-								<% end %>
-							</ul>
-							<% if project.video.blank? %>
-								<%= image_tag project.image, width:880 %>
-							<% else %>
-								<%= project.video.html_safe %>
-							<% end %>
-						</div>
-					</div>
-				 <% end %>
-       </div>
-       <div class="clear"></div>
-    </div>
+  <h1><%= project.title %></h1>
+	<div class='portfolio_text'>
+		<p><%= project.description %></p>			
+		<p>Tools: <%= project.tools %></p>
+		<p>
+			<%= link_to image_tag('github_profile.jpeg', width: 50), project.github %>
+			<%= link_to 'LIVE', project.website, class: 'live_icon' %>
+		</p>
+	</div>
+	<div class='portfolio_image'>
+		<%= image_tag project.image %>
 	</div>
 </div>
+<% end %>
+
 

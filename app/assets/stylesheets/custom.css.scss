@@ -297,61 +297,33 @@ html {
 						padding:5px 15px;
 					}
 				}
-				#carousel {
-			    width:916px;
-			    height:900px;   
-			    margin:0 auto;
-					#slides {
-						color:black;
-					    overflow:hidden;
-					    /* fix ie overflow issue */
-					    position:relative;
-					    width:916px;
-					    height:850px;
-							background:white;
+				.portfolio_text {
+					width:350px;
+					float:left;
+					.live_icon {
+						margin:0px 5px;
+						padding:11px 8px;
+						position:relative;
+						top:-19px;
+						border-radius:4px;
+						border:1px solid $button_border;
+						background:-webkit-linear-gradient($button_light, $button_dark);
+						color:white;
+						text-shadow:0px 0px 5px black;
 					}
-
-					/* remove the list styles, width : item width * total items */ 
-					#slides .list {
-					    position:relative;
-					    left:0;
-					    top:0;
-					    list-style:none;
-					    margin:0;
-					    padding:0;  
-					    width:2748px;       
+					.live_icon:hover {
+						color:white;
 					}
-
-					/* width of the item, in this case I put 250x250x gif */
-					#slides .list_items {
-					    width:916px;
-					    height:850px;   
-					    float:left;
-							padding:5px 0px;
-							li {
-								padding:5px 15px;
-							}
+				}
+				.portfolio_image {
+					img {
+						width:520px;
+						float:right;
+						margin:10px 20px;
+						border-radius:4px;
+						border:1px solid $light_charcoal;
+						box-shadow:3px 3px 4px lightgrey;
 					}
-
-					#slides .list_items img {
-					    margin:15px 15px;
-							border-radius:4px;
-							border:1px solid $lighter_charcoal;
-					}
-					#slides .list_items iframe {
-					    margin:15px 15px;
-							border-radius:4px;
-							border:1px solid $lighter_charcoal;
-					}
-
-					/* Styling for prev and next buttons */
-					#buttons {
-					    padding:0px 0px 5px 0px;
-					  	margin:-15px 0px;
-					    float:right;	
-							font-size:50px;
-					}
-					.clear {clear:both}
 				}
 			}
 			footer {
