@@ -17,7 +17,7 @@ $(document).ready(function() {
     var left_value = item_width * (-1); 
          
     //move the last item before first item, just in case user click prev button
-    $('#slides .list_items:nth-child(1)').before($('#slides .list_items:last'));
+    $('#slides .list_items:first').before($('#slides .list_items:last'));
      
     //set the default item to the correct position 
     $('#slides .list').css({'left' : left_value});
@@ -32,7 +32,7 @@ $(document).ready(function() {
         $('#slides .list').animate({'left' : left_indent}, 200,function(){    
  
             //move the last item and put it as first item               
-            $('#slides .list_items:nth-child(1)').before($('#slides .list_items:last'));           
+            $('#slides .list_items:first').before($('#slides .list_items:last'));           
  
             //set the default item to correct position
             $('#slides .list').css({'left' : left_value});
@@ -55,7 +55,7 @@ $(document).ready(function() {
         $('#slides .list').animate({'left' : left_indent}, 200, function () {
              
             //move the first item and put it as last item
-            $('#slides .list_items:last').after($('#slides .list_items:nth-child(1)'));                  
+            $('#slides .list_items:last').after($('#slides .list_items:first'));                  
              
             //set the default item to correct position
             $('#slides .list').css({'left' : left_value});
