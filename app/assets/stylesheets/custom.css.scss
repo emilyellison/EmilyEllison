@@ -331,7 +331,7 @@ html {
 							width:350px;
 							float:left;
 							.live_icon {
-								margin:0px 5px;
+								margin:0px 5px 0px 0px;
 								padding:11px 8px;
 								position:relative;
 								top:-18px;
@@ -344,7 +344,9 @@ html {
 							.live_icon:hover {
 								color:white;
 							}
-							
+							.no_github {
+								top:16px;
+							}
 						}
 						.portfolio_image {
 							padding:10px 0px;

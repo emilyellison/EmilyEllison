@@ -12,8 +12,12 @@
 				  <% end %>
 				</ul>	
 				<p>
-					<%= link_to image_tag('github_profile.jpeg', width: 50), project.github %>
-					<%= link_to 'LIVE', project.website, class: 'live_icon' %>
+					<% if project.github.present? %>
+						<%= link_to 'LIVE', project.website, class: 'live_icon' %>
+					<% elsif project.github.blank? %>
+						<%= link_to 'LIVE', project.website, class: 'live_icon no_github' %>
+					<% end %>
+					<%= link_to image_tag('github_profile.jpeg', width: 50), project.github if project.github.present? %>
 				</p>
 			</div>
 			<div class='portfolio_image'>
