@@ -320,7 +320,7 @@ html {
 						border:1px solid $span_border;
 						border-radius:0px;
 						box-shadow:0px 0px 0px $span_shadow;
-						margin:-2px 0px 0px;
+						margin:-2px 0px 10px;
 						float:left;
 						background:$span_content;
 						padding-bottom:0px;
@@ -344,6 +344,7 @@ html {
 							.live_icon:hover {
 								color:white;
 							}
+							
 						}
 						.portfolio_image {
 							padding:10px 0px;
