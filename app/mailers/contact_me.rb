@@ -1,5 +1,5 @@
 class ContactMe < ActionMailer::Base
-  default to: "emilyellison986@gmail.com"
+  default to: "emily@fixitwithcode.com"
   
   def contact(inquiry)
     @inquiry = inquiry
