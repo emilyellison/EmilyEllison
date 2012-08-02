@@ -1,24 +1,26 @@
-<% @projects.each do |project| %>   
-<div class='span12'>
-  <h1><%= project.title %></h1>
-	<div class='portfolio_text'>
-		<p><%= project.description %></p>			
-		<p>Tools: <%= project.tools %></p>
-		<h4>Features</h4>
-		<ul>
-		  <% project.functionality.split(' * ').each do |function| %>
-		  	<li><%= function %></li>
-		  <% end %>
-		</ul>	
-		<p>
-			<%= link_to image_tag('github_profile.jpeg', width: 50), project.github %>
-			<%= link_to 'LIVE', project.website, class: 'live_icon' %>
-		</p>
-	</div>
-	<div class='portfolio_image'>
-		<%= image_tag project.image %>
-	</div>
+<div id='accordion'>
+	<% @projects.each do |project| %>   
+	  <h1 class='<%= 'first' if project == @projects.first %>'><%= link_to project.title, '#' %></h1>
+		<div class='span12'>
+			<div class='portfolio_text'>
+				<p><%= project.description %></p>			
+				<p>Tools: <%= project.tools %></p>
+				<h4>Features</h4>
+				<ul>
+				  <% project.functionality.split(' * ').each do |function| %>
+				  	<li><%= function %></li>
+				  <% end %>
+				</ul>	
+				<p>
+					<%= link_to image_tag('github_profile.jpeg', width: 50), project.github %>
+					<%= link_to 'LIVE', project.website, class: 'live_icon' %>
+				</p>
+			</div>
+			<div class='portfolio_image'>
+				<%= image_tag project.image %>
+			</div>
+		</div>
+	<% end %>
 </div>
-<% end %>
 
 

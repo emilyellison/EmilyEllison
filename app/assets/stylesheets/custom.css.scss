@@ -297,32 +297,65 @@ html {
 						padding:5px 15px;
 					}
 				}
-				.portfolio_text {
-					width:350px;
-					float:left;
-					.live_icon {
-						margin:0px 5px;
-						padding:11px 8px;
-						position:relative;
-						top:-18px;
-						border-radius:4px;
-						border:1px solid $button_border;
-						background:-webkit-radial-gradient($button_light, $button_dark);
-						color:white;
-						text-shadow:0px 0px 5px black;
+				#accordion {
+					width:917px;
+					padding:0px 10px;
+					h1 {
+						height:auto;
+						font-size:22px;
+						padding:10px 15px;
+						border-bottom:1px solid $span_border;
+						background:-webkit-linear-gradient($header_background_light,$header_background_dark);
+						text-shadow:1px 1px 10px $header_shadow;
+						margin-bottom:0px;
+						a {
+							color:white;
+						}
 					}
-					.live_icon:hover {
-						color:white;
+					.first {
+						border-top-left-radius:4px;
+						border-top-right-radius:4px;
 					}
-				}
-				.portfolio_image {
-					img {
-						width:520px;
-						float:right;
-						margin:10px 20px;
-						border-radius:4px;
-						border:1px solid $light_charcoal;
-						box-shadow:3px 3px 4px lightgrey;
+					.span12 {
+						border:1px solid $span_border;
+						border-radius:0px;
+						box-shadow:0px 0px 0px $span_shadow;
+						margin:-2px 0px 0px;
+						float:left;
+						background:$span_content;
+						padding-bottom:0px;
+						width:915px;
+						height:700px;
+						.portfolio_text {
+							padding:10px 0px;
+							width:350px;
+							float:left;
+							.live_icon {
+								margin:0px 5px;
+								padding:11px 8px;
+								position:relative;
+								top:-18px;
+								border-radius:4px;
+								border:1px solid $button_border;
+								background:-webkit-radial-gradient($button_light, $button_dark);
+								color:white;
+								text-shadow:0px 0px 5px black;
+							}
+							.live_icon:hover {
+								color:white;
+							}
+						}
+						.portfolio_image {
+							padding:10px 0px;
+							img {
+								width:520px;
+								float:right;
+								margin:10px 20px;
+								border-radius:4px;
+								border:1px solid $light_charcoal;
+								box-shadow:3px 3px 4px lightgrey;
+							}
+						}
 					}
 				}
 			}
