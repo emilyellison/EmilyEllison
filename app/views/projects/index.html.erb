@@ -1,6 +1,8 @@
 <div id='accordion'>
 	<% @projects.each do |project| %>   
-	  <h1 class='<%= 'first' if project == @projects.first %>'><%= link_to project.title, '#' %></h1>
+	  <h1 class='<%= 'first' if project == @projects.first %>'>
+			<%= link_to project.title, '#' %>
+		</h1>
 		<div class='span12'>
 			<div class='portfolio_text'>
 				<p><%= project.description %></p>			

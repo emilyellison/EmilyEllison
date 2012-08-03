@@ -44,7 +44,7 @@
 	<div class='recent_update'>
 		<h1>Recent Update</h1>
 		<p style='font-style:italic;'>via Twitter</p>
-		<p><%= @tweet['from_user_name'] %> <%= link_to "@#{@tweet['from_user']}", "https://twitter.com/#{@tweet['from_user']}" %></p>
+		<p>Emily Ellison <%= link_to "@emilyellison986", "https://twitter.com/emilyellison986" %></p>
 		<p><%= @tweet['text'] %></p>
 		<p class='date_stamp'>Tweeted <%= time_ago_in_words(@tweet['created_at']) %> ago.</p>
 	</div>

@@ -8,7 +8,7 @@ class OverviewController < ApplicationController
   end
   
   def about
-    @tweet = JSON.parse(open('http://search.twitter.com/search.json?q=emilyellison986&rpp=5&include_entities=true&result_type=mixed').read)['results'][0]
+    @tweet = JSON.parse(open('https://api.twitter.com/1/statuses/user_timeline.json?include_entities=true&include_rts=true&screen_name=emilyellison986&count=1').read)[0]
   end
   
 end
