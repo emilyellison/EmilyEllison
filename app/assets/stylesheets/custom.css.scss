@@ -199,12 +199,13 @@ html {
 					}
 					form {
 						padding:10px 15px;
-						input, label, textarea {
+						input, label, textarea, select {
 							padding:5px 0px;
 							display:block;
 							font-size:18px;
 						}
-						input, textarea {
+						input, textarea, select {
+							outline:none;
 							width:400px;
 							border:1px solid $input_border;
 							box-shadow:1px 1px 4px lightgrey inset;

@@ -23,6 +23,9 @@
 				</p>
 			</div>
 			<div class='portfolio_image'>
+				<% project.project_images.each do |image| %>
+					<%= image_tag image.image %>
+				<% end %>
 				<%#= image_tag project.image %>
 			</div>
 		</div>

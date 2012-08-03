@@ -36,6 +36,24 @@
 	<% end %>
 	</ul>
 	<hr/>
+	<h2>
+		Manage Project Images
+		<span class='header_button'>
+			<%= link_to '+', new_project_image_url, class: 'button' %>
+		</span>	
+	</h2>
+	<ul>
+	<% @project_images.each do |project_image| %>
+		<li>
+			<%= project_image.image %>
+			<span class='edit_delete'>
+				<%= link_to '&#9998;'.html_safe, edit_project_image_url(project_image.id) %>
+				<%= link_to '&#9851;'.html_safe, project_image_url(project_image.id), method: :delete, confirm: 'Are you sure you want to delete this project image?' %>
+			</span>
+		</li>
+	<% end %>
+	</ul>
+	<hr/>
 	<br/>
 	<p><%= link_to 'Sign Out', sign_out_url, class: 'button' %></p>
 	<br/>

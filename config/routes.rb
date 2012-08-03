@@ -10,6 +10,7 @@ EmilyEllison::Application.routes.draw do
   
   resources :blog_posts
   resources :projects
+  resources :project_images, only: [ :new, :create, :edit, :update, :destroy ]
   
   get '/sign_in' => 'sessions#new', as: :sign_in
   post '/sign_in' => 'sessions#create'
