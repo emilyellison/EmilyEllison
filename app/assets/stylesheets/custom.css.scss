@@ -239,6 +239,9 @@ html {
 					.recent_update {
 						height:285px;
 					}
+					.trivia {
+						height:243px;
+					}
 				}
 				.alert-error {
 					border:1px solid red;	
@@ -301,6 +304,16 @@ html {
 				.recent_work {
 					height:619px;
 				}
+				.about_pic {
+					img {
+						margin:2px 10px 0px;
+						width:290px;
+						height:304px;
+						border-radius:4px;
+						border:1px solid $light_charcoal;
+						box-shadow:3px 3px 4px lightgrey;
+					}
+				}
 				#accordion {
 					width:918px;
 					padding:0px 10px;
@@ -330,7 +343,7 @@ html {
 						background:$span_content;
 						padding-bottom:0px;
 						width:916px;
-						height:700px;
+						height:826px;
 						.portfolio_text {
 							padding:10px 0px;
 							width:350px;
