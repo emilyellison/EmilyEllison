@@ -297,8 +297,11 @@ html {
 						padding:5px 15px;
 					}
 				}
+				.recent_work {
+					height:619px;
+				}
 				#accordion {
-					width:917px;
+					width:918px;
 					padding:0px 10px;
 					h1 {
 						outline:none;
@@ -325,7 +328,7 @@ html {
 						float:left;
 						background:$span_content;
 						padding-bottom:0px;
-						width:915px;
+						width:916px;
 						height:700px;
 						.portfolio_text {
 							padding:10px 0px;
