@@ -9,7 +9,7 @@ EmilyEllison::Application.routes.draw do
   post '/hire' => 'inquiries#create'
   
   resources :blog_posts
-  resources :projects
+  resources :projects, except: [ :show ]
   resources :project_images, only: [ :new, :create, :edit, :update, :destroy ]
   
   get '/sign_in' => 'sessions#new', as: :sign_in

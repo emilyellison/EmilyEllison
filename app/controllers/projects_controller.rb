@@ -20,10 +20,6 @@ class ProjectsController < ApplicationController
     end
   end
   
-  def show
-    @project = Project.find_by_id(params[:id])
-  end
-  
   def edit
     @project = Project.find_by_id(params[:id])
   end
