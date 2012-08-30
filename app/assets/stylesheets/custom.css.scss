@@ -124,6 +124,11 @@ html {
 				background:$content;
 				box-shadow:0px 0px 40px $frame_box_shadow;
 				padding:20px 10px;
+				.row {
+					display:block;
+					width:100%;
+					float:left;
+				}
 				.span12 {
 					width:916px; /*TEST THIS LATER*/
 				}
