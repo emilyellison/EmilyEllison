@@ -1,0 +1,31 @@
+<% if @project.errors.any? %>
+	<p>Yikes! Something went wrong...</p>
+	<ul>
+		<% @project.errors.full_messages.each do |msg| %>
+			<li><%= msg %>.</li>
+		<% end %>
+	</ul>
+<% end %>
+
+<%= form_for @project do |f| %>
+	<%= f.label :title %>
+	<%= f.text_field :title %>
+	<%= f.label :description %>
+	<%= f.text_area :description %>
+	<%= f.label :when %>
+	<%= f.text_field :when %>	
+	<%= f.label :website %>
+	<%= f.text_field :website %>
+	<%= f.label :github %>
+	<%= f.text_field :github %>
+	<%= f.label :tools %>
+	<%= f.text_area :tools %>
+	<%= f.label :functionality %>
+	<%= f.text_area :functionality %>
+	<br/><br/>
+	<% if @project.new_record? %>
+		<%= f.submit 'Add Project', class: 'button' %>
+	<% else %>
+		<%= f.submit 'Update Project', class: 'button' %>
+	<% end %>
+<% end %>

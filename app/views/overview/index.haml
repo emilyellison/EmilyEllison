@@ -1,0 +1,34 @@
+.span12
+  %h1 Web Developer 
+  .web_developer_paragraph
+    %p 
+      A problem that can be fixed with code isn't a problem. It's an opportunity.
+    %p 
+      With a passion for building data-backed, dynamic, user-friendly websites, 
+      my goal is delivering a product that is inviting for customers and easy to
+      maintain for the client.
+    %ul 
+      %li Data-Backed Websites 
+      %li Ruby on Rails Development 
+      %li Database Construction 
+      %li Web Analytics 
+    %ul 
+      %li CMS Development 
+      %li Authentication & Authorization 
+      %li Complex Search 
+      %li API Usage 
+  = image_tag 'emily_1.jpeg', width:298, class: 'web_developer_image'
+.span6
+  %h1 Recent Projects 
+  .recent_work
+    - @projects.each do |project|
+      %h2= link_to project.title, project_url(project.id) 
+      %p= project.description 
+    
+.span6
+  %h1 Recent Articles 
+  .recent_work
+    - @blog_posts.each do |blog_post|
+      %h2= link_to blog_post.title, blog_post_url(blog_post.id) 
+      %p= Markdown.new(truncate(blog_post.content, length: 200)).to_html.html_safe 
+    

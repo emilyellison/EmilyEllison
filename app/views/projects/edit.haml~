@@ -1,0 +1,4 @@
+<div class='span12'>
+	<h1>Update your Project</h1>
+	<%= render 'projects/form' %>
+</div>

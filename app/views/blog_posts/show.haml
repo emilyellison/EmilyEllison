@@ -1,0 +1,4 @@
+.span12
+  %h1= @blog_post.title
+  .blog_post
+    = Markdown.new(@blog_post.content, :space_after_headers => true).to_html.html_safe

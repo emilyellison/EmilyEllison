@@ -1,0 +1,4 @@
+<div class='span12'>
+	<h1>Edit an Image for your Project</h1>
+	<%= render 'project_images/form' %>
+</div>
