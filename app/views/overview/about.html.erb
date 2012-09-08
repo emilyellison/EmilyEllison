@@ -40,15 +40,7 @@
 	<h1>Contact</h1>
 	<%= render 'overview/contact_info' %>
 </div>
-<div class='span4'>
-	<div class='recent_update'>
-		<h1>Recent Update</h1>
-		<p style='font-style:italic;'>via Twitter</p>
-		<p>Emily Ellison <%= link_to "@emilyellison986", "https://twitter.com/emilyellison986" %></p>
-		<p><%= @tweet['text'] %></p>
-		<p class='date_stamp'>Tweeted <%= time_ago_in_words(@tweet['created_at']) %> ago.</p>
-	</div>
-</div>
+
 <div class='span8'>
 	<h1>Trivia</h1>
 	<div class='trivia'>
