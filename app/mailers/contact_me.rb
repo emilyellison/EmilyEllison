@@ -5,4 +5,5 @@ class ContactMe < ActionMailer::Base
     @inquiry = inquiry
     mail(:from => inquiry.email, :subject => 'Hello')
   end
+  
 end
