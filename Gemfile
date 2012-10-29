@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.3'
 gem 'redcarpet'
 gem 'haml', '3.1.7'
+gem 'sass'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

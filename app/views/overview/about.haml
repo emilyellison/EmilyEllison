@@ -36,19 +36,7 @@
     dream web applications.
 .span4
   %h1 Contact 
-   = render 'overview/contact_info'
-.span4
-  .recent_update
-    %h1 Recent Update 
-    %p{ style:'font-style:italic;'} via Twitter 
-    %p 
-      Emily Ellison 
-      = link_to "@emilyellison986", "https://twitter.com/emilyellison986"
-    %p= @tweet['text']
-    %p.date_stamp 
-      Tweeted 
-      = time_ago_in_words(@tweet['created_at']) 
-      ago. 
+  = render 'overview/contact_info'
 .span8
   %h1 Trivia 
   .trivia
