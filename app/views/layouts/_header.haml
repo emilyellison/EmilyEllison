@@ -1,0 +1,19 @@
+%header
+  .logo
+    %h1= link_to 'Fix It With Code', root_url
+    %p The Portfolio of the Ellisons
+  .menu
+    %ul
+      %li{ class: @home_page }
+        = link_to 'Home', root_url 
+      %li{ class: @portfolio_page }
+        = link_to 'Portfolio', projects_url 
+      %li{ class: @about_page }
+        = link_to 'About', about_url
+      %li{ class: @blog_page }
+        = link_to 'Blog', blog_posts_url
+      %li{ class: @hire_page }
+        = link_to 'Hire', new_inquiry_url 
+      - if @current_user && @current_user.admin == true
+        %li{ class: @admin_page}
+          = link_to 'Admin', admin_url

@@ -1,0 +1,4 @@
+<div class='span12'>
+	<h1>Add a Blog Post</h1>
+	<%= render 'blog_posts/form' %>
+</div>

@@ -1,0 +1,17 @@
+!!! 5
+%html
+  %head
+    %title Fix It With Code
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application">
+    = csrf_meta_tags
+    <meta name="google-site-verification" content="JE_IuE7wRYP6dp10ZpVbR04Lz-OpAEGfz1_OT6TwjQc" />
+    <link href='http://fonts.googleapis.com/css?family=Pontano+Sans' rel='stylesheet' type='text/css'>
+  %body
+    .frame
+      = render 'layouts/header'
+      .content
+        .content_wrap
+          = render 'layouts/errors'
+          = yield 
+      = render 'layouts/footer'

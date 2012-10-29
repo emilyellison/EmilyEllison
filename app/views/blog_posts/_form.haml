@@ -1,0 +1,23 @@
+- if @blog_post.errors.any? 
+  %p Yikes! Something went wrong...
+  %ul 
+    = @blog_post.errors.full_messages.each do |msg| 
+      %li
+        = msg
+        .
+
+= form_for @blog_post do |f|
+  = f.label :title
+  = f.text_field :title
+  = f.label :blurb
+  = f.text_field :blurb
+  = f.label :content
+  = f.text_area :content
+  %br
+  %br 
+  - if @blog_post.new_record?
+    = f.submit 'Add Blog Post', class: 'button'
+  - else
+    = f.submit 'Update Blog Post', class: 'button'
+  
+

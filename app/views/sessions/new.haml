@@ -1,0 +1,10 @@
+.span12
+  %h1 Sign In
+  = form_tag sign_in_url do 
+    = label_tag :email, 'E-mail'
+    = text_field_tag :email
+    = label_tag :password
+    = password_field_tag :password
+    %br
+    %br
+    = submit_tag 'Sign In', class: 'button'
